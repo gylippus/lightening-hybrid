@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Presentation created using reveal.js: https://github.com/hakimel/reveal.js -->
+    <!-- Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se -->
+
+    <title>Hybrid Development Lightenting Talk</title>
+
+    <meta name="description" content="Hybrid Development Lightenting Talk">
+    <meta name="author" content="https://twitter.com/heryandotus">
+
+     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/ionic.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="css/ionicons.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+
+        <section data-background="img/tetons.jpg" class="tetons">
+          <p style="margin-top: 20px">
+            <img src="img/apple.png" class="logo" width="210" height="210" style="margin-right: 15px">
+            <img src="img/android.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
+            <img src="img/windows.png" class="logo" width="210" height="210" style="margin-left: 15px; margin-right: 15px">
+            <img src="img/firefoxos.png" class="logo" width="210" height="210" style="margin-left: 15px;">
+          </p>
+          <h4>Building awesome hybrid mobile apps with HTML/CSS/JS</h4>
+          <h5 class="framework-url">
+            <a href="http://ionicframework.com/" target="_blank">ionicframework.com</a></br>
+            <a href="http://phonegap.com/" target="_blank">phonegap.com</a>
+          </h5>
+          <h5 class="framework-url presenter">
+            <a href="http://twitter.com/heryandotus" target="_blank">Presented by Ryan Hanna @heryandotus</a>
+          </h5>
+        </section>
+
+        <section>
+            <img src="img/codecademy.png" class="logo" height="650">
+        </section>
+
+        <section>
+          <h2>Web Technologies You Already Know and Love</h2>
+          <div style="margin-top: 70px">
+            <img src="img/html.png" class="logo" width="185" height="260">
+            <img src="img/css.png" class="logo" width="185" height="260" style="margin-left: 80px; margin-right: 80px;">
+            <img src="img/js.png" class="logo" width="185" height="260">
+          </div>
+          <p style="margin-top: 30px"><span class="light-text">
+            (You'll feel right at home)
+          </span></p>
+        </section>
+
+        <section>
+          <h2>Hybrid Apps!</h2>
+          <ul>
+            <li>HTML5 that acts like native</li>
+            <li>Web wrapped in native layer</li>
+            <li>Direct access to native APIs</li>
+            <li>Cordova/Phonegap</li>
+            <li>Familiar web dev environment</li>
+          </ul>
+        </section>
+
+        <section class="left">
+          <h2>Hybrid Models</h2>
+          <p>PhoneGap + UI + MVC (BBC Olympics, Untappd, Sworkit)<p>
+          <p>Native navigation + web content (Basecamp)</p>
+        </section>
+
+        <section>
+          <img src="img/ionic-logo.png" class="logo" width="296" height="331">
+          <blockquote>
+            &ldquo;Free and open source library of mobile-optimized web components, gestures, and tools for building highly interactive apps with HTML5/CSS/AngularJS.&rdquo;
+          </blockquote>
+        </section>
+
+        <section>
+          <div class="col preview">
+            <img src="img/list-complex-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Complex Lists</h2>
+            <ul style="margin-left: 70px">
+              <li>AngularJS Directive</li>
+              <li>Buttons exposed by swiping</li>
+              <li>Reorder</li>
+              <li>Delete</li>
+            </ul>
+            <pre><code data-trim contenteditable class="xml">
+<ion-list>
+  <ion-item ng-repeat="item in items"
+            option-buttons="buttons"
+            class="item-thumbnail-left"
+            >
+    <img ng-src="{{ item.pic }}">
+    <h2>{{ item.name }}</h2>
+    <p>{{ item.quote }}</p>
+  </ion-item>
+</ion-list></code></pre>
+          </div>
+        </section>
+
+        <section>
+          <div class="col preview">
+            <img src="img/tabs-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Tabs</h2>
+            <pre><code data-trim contenteditable class="xml">
+<ion-tabs tabs-type="tabs-icon-only">
+
+  <ion-tab title="Home" icon="ion-star">
+    <ion-nav-view></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Feedback" icon="ion-thumbsdown">
+    <ion-nav-view></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Messages" icon="ion-chatbubble-working">
+    <ion-nav-view></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs></code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="col preview">
+            <img src="img/sidemenu-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Side Menu</h2>
+          <pre><code data-trim contenteditable class="xml">
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar type="bar-positive"
+             back-button-type="button-icon"
+             back-button-icon="ion-ios7-arrow-back"></ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-positive">
+      <div class="title">Projects</div>
+    </header>
+    <ion-content has-header="true">
+      <div class="list">
+        <a href="#/work" class="item">Work</a>
+        <a href="#/home" class="item">Home</a>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus></code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="col preview">
+            <img src="img/slidebox-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Slide Box</h2>
+          <pre><code data-trim contenteditable class="xml">
+<ion-slide-box on-slide-changed="slideChanged(index)">
+  <ion-slide>
+    Slide 1
+  </ion-slide>
+  <ion-slide>
+    Slide 2
+  </ion-slide>
+  <ion-slide>
+    Slide 3
+  </ion-slide>
+</ion-slide-box></code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="col preview">
+            <img src="img/actionsheet-example.png" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Action Sheet</h2>
+          <pre><code data-trim contenteditable class="js">
+$ionicActionSheet.show({
+  titleText: 'Modify your album',
+  buttons: [
+    { text: 'Share' },
+    { text: 'Move' },
+  ],
+  destructiveText: 'Delete',
+  cancelText: 'Cancel',
+  buttonClicked: function(index) {
+    console.log('BUTTON CLICKED', index);
+    return true;
+  }
+});</code></pre>
+          </div>
+        </section>
+
+
+        <section>
+          <div class="col preview">
+            <img src="img/pull-refresh-animation.gif" class="logo" width="380" height="800">
+          </div>
+          <div class="col code">
+            <h2>Pull to Refresh</h2>
+          <pre><code data-trim contenteditable class="xml">
+            <ion-content on-refresh="refreshData()">
+              <ion-refresher></ion-refresher>
+              <!-- content -->
+            </ion-content></code></pre>
+          </div>
+        </section>
+
+        <section class="left">
+          <h2 class="slide-title">SWORKIT</h2>
+          <div class="col" style="width:33%;position:relative">
+            <img src="img/sworkit1.png" style="border:none;max-width:108%;background-color:transparent;box-shadow:none;width:108%;margin-top: -8%;"></img>
+            <video width="304px" height="540px" autoplay="autoplay" loop style="position: absolute;height: 382px;left: 21px;top: 65px;"> 
+            <source src="img/SworkitProAndroid-sm.mp4" type="video/mp4" />
+            </video>            
+          </div>
+          <div class="col" style="width:33%;position:relative">
+            <img src="img/sworkit3.png" style="border:none;max-width:100%;background-color:transparent;box-shadow:none"></img>
+            <video width="304px" height="540px" autoplay="autoplay" loop style="position: absolute;height: 364px;left: -7px;top: 89px;"> 
+            <source src="img/SworkitProiOSCombinedsm.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="col" style="width:33%;margin-top:-60px">
+            <h4 style="opacity:0.6;font-size:36px;margin-bottom:0px">Stats</h4>
+            <p style="font-size:24px">5 Million Downloads</p>
+            <p style="font-size:24px">Featured in Apple App Store & Google Play</p>
+            <h4 style="opacity:0.6;font-size:36px;margin-bottom:0px">Challenges</h4>
+            <p style="font-size:24px">Android Drawer</p>
+            <p style="font-size:24px">HTML5 Inline Video</p>
+            <p style="font-size:24px">13 Languages</p>
+            <h4 style="opacity:0.6;font-size:36px;margin-bottom:0px">Plugins</h4>
+            <p style="font-size:24px">Healthkit, HTML5Video, SessionM, Kiip, LowLatencyAudio, SocialShare, Datepicker, ScreenOrientation, AppAvailability, Keyboard, File, File-Transfer, Splashscreen, InAppBrowser</p>
+          </div>
+        </section>
+
+        <section class="left">
+          <h2>More Examples</h2>
+          <div class="example-app">
+            <img src="img/keychainapp.png" />
+            <a href="https://www.keychainlogistics.com/">Keychain</a>
+          </div>
+          <div class="example-app">
+            <img src="img/chefsteps.png" />
+            <a href="http://chefsteps.com/">ChefSteps</a>
+          </div>
+          <div class="example-app">
+            <img src="img/habitrpg.png" />
+            <a href="https://habitrpg.com/">HabitRPG</a>
+          </div>
+          <div class="example-app">
+            <img src="img/craftboom.png" />
+            <a href="http://www.craft-boom.com/">Craft Boom</a>
+          </div>
+          <footer class="footer">showcase.ionicframework.com</footer>
+        </section>
+
+        <section>
+          <blockquote>
+            &ldquo;YOU can create and distribute apps for iOS and Android with HTML, CSS, & JS.&rdquo;
+          </blockquote>
+          <h2 class="final-shout"><a href="https://twitter.com/heryandotus" target="_blank">@heryandotus</a></h2>
+          <h3><a href="https://twitter.com/phonegap" target="_blank">@phonegap</a></h3>
+          <h3><a href="https://twitter.com/ionicframework" target="_blank">@ionicframework</a></h3>
+        </section>
+
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
